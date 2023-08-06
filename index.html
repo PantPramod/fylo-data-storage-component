@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Fylo data storage component</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #0c122c;
+            font-size: 14px;
+        }
+
+        .bg-image {
+            background: url('/images/bg-desktop.png');
+        }
+
+        .triangle-right {
+            width: 0;
+            height: 0;
+            border-top: 25px solid transparent;
+            border-right: 25px solid white;
+            transform: rotate(-90deg)
+        }
+
+        /* ### Primary
+
+- Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%)
+
+### Neutral
+
+- Pale Blue: hsl(243, 100%, 93%)
+- Grayish Blue: hsl(229, 7%, 55%)
+- Dark Blue: hsl(228, 56%, 26%)
+- Very Dark Blue: hsl(229, 57%, 11%) */
+    </style>
+</head>
+
+<body>
+    <div class=" relative flex items-center w-full  justify-center h-screen">
+
+        <div class="flex flex-col gap-y-8  md:flex-row w-[80%] gap-x-10 justify-center">
+            <div class="bg-[#1d2c67] p-10 rounded-lg rounded-tr-[50%] w-full md:w-[30%] ">
+                <img src="/images/logo.svg" alt="logo">
+
+                <div class="flex gap-x-4 mt-10">
+                    <img src="/images/icon-document.svg" alt="document" class="bg-[#0c122c] p-2 rounded-md">
+                    <img src="/images/icon-folder.svg" alt="folder" class="bg-[#0c122c] p-2 rounded-md">
+                    <img src="/images/icon-upload.svg" alt="icon-upload" class="bg-[#0c122c] p-2 rounded-md">
+                </div>
+
+            </div>
+
+            <div class="bg-[#1d2c67] w-full md:w-[70%] rounded-md p-10 self-end relative">
+                <p class="text-white">You've used <strong>815 GB</strong> of your storage </p>
+                <div class="mt-5 h-4 rounded-md bg-[#0c122c] flex items-center">
+                    <div class="w-[70%] h-4 rounded-md bg-gradient-to-r from-[#ffa399] to-[#ff4d97]"></div>
+                    <div class="w-[14px] h-[14px] rounded-full bg-white -translate-x-[16px]"></div>
+                </div>
+                <div class="flex justify-between text-white font-bold mt-1 ">
+                    <p>0 GB</p>
+                    <p>1000GB</p>
+                </div>
+
+                <div class=" absolute bg-white p-5 top-[100%] -translate-y-1/2 md:top-0 rounded-md rounded-br-none right-10 md:-translate-y-[80%]">
+                    <p><span class="font-bold text-3xl ">185</span> GB LEFT</p>
+                    <div class="hidden md:block triangle-right absolute top-[99%] right-0"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="top-[50vh] left-0 right-0 h-[50vh] absolute bg-image z-[-1] "></div>
+
+    </div>
+</body>
+
+</html>
